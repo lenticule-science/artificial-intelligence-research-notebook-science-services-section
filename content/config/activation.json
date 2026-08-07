@@ -16,8 +16,8 @@
   },
   "signedChannelDelivery": {
     "status": "enabled-active-under-user-systemd",
-    "serviceUnit": "emsweb-artificial-intelligence-notebook-explainer-a2a.service",
-    "artifactServiceUnit": "emsweb-artificial-intelligence-notebook-artifacts.service",
+    "serviceUnit": "artificial-intelligence-research-notebook-explainer-a2a.service",
+    "artifactServiceUnit": "artificial-intelligence-research-notebook-artifacts.service",
     "customer": "urn:ame:artificial-intelligence-youtube-channel-enterprise",
     "agentCardIdentity": "ni:///sha-256;0gi9QKYrNSEBuEuEgJomcDKd_eRrio6d4ooHgCr2YOU",
     "artifactAuthority": "per-delivery bearer capability"

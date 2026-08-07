@@ -1,7 +1,7 @@
 {
   "name": "Machine Learning Persistent Notebook Explainer Service", "description": "Transforms one exact authenticated curriculum delivery through the dedicated NotebookLM notebook and returns an attenuated MP4 artifact capability.",
   "supportedInterfaces": [{ "url": "${BASE_URL}/a2a/jsonrpc", "protocolBinding": "JSONRPC", "tenant": "", "protocolVersion": "1.0" }, { "url": "${BASE_URL}/a2a/rest", "protocolBinding": "HTTP+JSON", "tenant": "", "protocolVersion": "1.0" }],
-  "provider": { "url": "https://emsenn.net/", "organization": "Artificial Intelligence Persistent Notebook Enterprise" }, "version": "1.0.0", "capabilities": { "streaming": false, "pushNotifications": false, "extensions": [], "extendedAgentCard": false },
+  "provider": { "url": "https://emsenn.net/", "organization": "Artificial Intelligence Research Notebook Services" }, "version": "1.0.0", "capabilities": { "streaming": false, "pushNotifications": false, "extensions": [], "extendedAgentCard": false },
   "securitySchemes": {}, "securityRequirements": [], "defaultInputModes": ["application/rmn+cbor"], "defaultOutputModes": ["application/rmn+cbor"],
   "skills": [{ "id": "artificial-intelligence-persistent-notebook-explainer", "name": "Machine learning curriculum explainer", "description": "Generates or returns one source- and capacity-bound explainer artifact.", "tags": ["notebooklm", "machine-learning", "explainer"], "examples": [], "inputModes": ["application/rmn+cbor"], "outputModes": ["application/rmn+cbor"], "securityRequirements": [] }], "signatures": []
 }

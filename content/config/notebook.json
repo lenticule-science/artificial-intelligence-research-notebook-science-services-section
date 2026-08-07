@@ -1,7 +1,7 @@
 {
   "type": "PersistentNotebookIdentity",
   "status": "bound-provider-created",
-  "actor": "urn:ame:artificial-intelligence-persistent-notebook-enterprise",
+  "actor": "urn:ame:artificial-intelligence-research-notebook-services",
   "line": "artificial-intelligence-history-and-frontiers",
   "notebookId": "9c3eed44-7fa3-4203-8b79-e0a20b91017f",
   "url": "https://notebooklm.google.com/notebook/9c3eed44-7fa3-4203-8b79-e0a20b91017f",
