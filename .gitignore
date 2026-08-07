@@ -1,0 +1,19 @@
+# Runtime artifacts belong in external object storage, not Git.
+/data/artifact-exchange/*.mp4
+/data/artifact-exchange/*.mp3
+/data/artifact-exchange/*.m4a
+/data/artifact-exchange/*.wav
+/data/artifact-exchange/*.srt
+/data/artifact-exchange/*.vtt
+/data/artifact-exchange/*.webvtt
+/data/artifacts/*.mp4
+/data/artifacts/*.mp3
+/data/artifacts/*.m4a
+/data/artifacts/*.wav
+/data/artifacts/*.srt
+/data/artifacts/*.vtt
+/data/artifacts/*.webvtt
+
+# Signing keys are provisioned out of band.
+/data/credentials/*.pem
+/data/credentials/*.key
