@@ -1,0 +1,21 @@
+[Unit]
+Description=Machine Learning persistent notebook bearer artifact exchange
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/artificial-intelligence-persistent-notebook-enterprise
+ExecStart=/home/emsenn/.config/nvm/versions/node/v24.13.1/bin/node src/artifact-exchange.mjs
+Environment=ARTIFICIAL_INTELLIGENCE_NOTEBOOK_ARTIFACT_HOST=127.0.0.1
+Environment=ARTIFICIAL_INTELLIGENCE_NOTEBOOK_ARTIFACT_PORT=18449
+Restart=on-failure
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=default.target

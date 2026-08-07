@@ -1,0 +1,23 @@
+{
+  "name": "@emsweb/artificial-intelligence-persistent-notebook-enterprise",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/notebook.mjs && node --check src/operations.mjs && node --check src/a2a-backend.mjs && node --check src/a2a-executor.mjs && node --check src/serve-a2a.mjs && node --check src/artifact-exchange.mjs && node --check test/notebook.test.mjs",
+    "test": "node --test test/notebook.test.mjs",
+    "verify": "npm run check && npm test",
+    "run-lesson": "node src/operations.mjs",
+    "serve-a2a": "node src/serve-a2a.mjs",
+    "serve-artifacts": "node src/artifact-exchange.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/a2a-agent-card-discovery-service": "1.0.1",
+    "@red-cup-engineering/a2a-contracted-agent-service": "2.0.5",
+    "@red-cup-engineering/a2a-rmn-part-service": "1.0.1",
+    "@red-cup-engineering/a2a-rmn-task-client-service": "1.1.1",
+    "@red-cup-engineering/semantic-content-identify-service": "0.2.2",
+    "@red-cup-engineering/witness-journal-rdf-projection-service": "1.1.0"
+  },
+  "license": "UNLICENSED"
+}

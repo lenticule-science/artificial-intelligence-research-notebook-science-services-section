@@ -1,0 +1,14 @@
+{
+  "type": "ArtificialIntelligenceNotebookLMProviderBinding",
+  "status": "active-standing-grant",
+  "customer": "urn:ame:artificial-intelligence-persistent-notebook-enterprise",
+  "provider": "urn:ame:notebooklm-inference-team",
+  "notebookId": "9c3eed44-7fa3-4203-8b79-e0a20b91017f",
+  "agentUrl": "http://127.0.0.1:18436/.well-known/agent-card.json",
+  "agentCardIdentity": "ni:///sha-256;XYEzzCCjU-6MFWm3N7vuZMuqNe6_eM7OaUTSc2FyplA",
+  "standingGrantAcceptance": "urn:sha256:54931a5ca0fceec68e050a8ae13e9cd0f35a764a5bfcd63f2f2d94c2675d5ede",
+  "witnessJournalAgentUrl": "http://127.0.0.1:19764/.well-known/agent-card.json",
+  "videoCustomer": "urn:ame:artificial-intelligence-youtube-channel-enterprise",
+  "videoCapacityAllocation": "ai-history-frontiers-alternating",
+  "videoFormat": "explainer"
+}
