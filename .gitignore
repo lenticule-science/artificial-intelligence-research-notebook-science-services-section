@@ -17,3 +17,5 @@
 # Signing keys are provisioned out of band.
 /data/credentials/*.pem
 /data/credentials/*.key
+data/logs/
+data/state/
