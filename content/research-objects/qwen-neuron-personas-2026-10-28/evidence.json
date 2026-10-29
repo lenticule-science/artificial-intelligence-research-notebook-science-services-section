@@ -1,0 +1,312 @@
+{
+  "kind": "source-attributed-experimental-claims",
+  "version": 1,
+  "researchCut": "2026-10-28",
+  "researchStatus": "source-audited-reported-observations-not-model-replication",
+  "sources": [
+    {
+      "id": "lyra",
+      "url": "https://github.com/lyramakesmusic/neuron-explorer",
+      "basis": "original-research",
+      "availability": "readable"
+    },
+    {
+      "id": "hedwig",
+      "url": "https://www.hedwigai.com/blog/qwen-personality-neurons",
+      "basis": "independent-follow-up",
+      "availability": "readable"
+    },
+    {
+      "id": "watson",
+      "url": "https://quasiqualia.com/notes/lyra-neurons.html",
+      "basis": "independent-follow-up",
+      "availability": "readable"
+    },
+    {
+      "id": "atlas",
+      "url": "https://qwen-neurons-site.vercel.app/",
+      "basis": "original-research",
+      "availability": "redirected-unreadable"
+    },
+    {
+      "id": "atlas-methods",
+      "url": "https://www.zeniteq.com/qwen3-8b-atlas-maps-34-220-persona-like-replies-kqdtxx",
+      "basis": "secondary-methods-report",
+      "availability": "readable"
+    },
+    {
+      "id": "acl",
+      "url": "https://aclanthology.org/2026.findings-acl.1528/",
+      "basis": "peer-reviewed-context",
+      "availability": "readable"
+    },
+    {
+      "id": "emnlp",
+      "url": "https://aclanthology.org/2026.findings-emnlp.1508/",
+      "basis": "peer-reviewed-context",
+      "availability": "readable"
+    }
+  ],
+  "studies": [
+    {
+      "id": "lyra-4b",
+      "model": "Qwen3.5-4B",
+      "design": "Selected layer 14 neuron 8949 positive and layer 13 neuron 7956 negative; reversible runtime steering",
+      "sourceIds": [
+        "lyra"
+      ]
+    },
+    {
+      "id": "hedwig-4b",
+      "model": "Qwen3.5-4B",
+      "design": "8-bit, greedy, 20-prompt selected-intervention comparisons, random pair controls",
+      "sourceIds": [
+        "hedwig"
+      ]
+    },
+    {
+      "id": "watson-4b",
+      "model": "Qwen3.5-4B",
+      "design": "bf16, greedy, thinking off; 12 random dose-matched controls, factual questions and measured natural activations",
+      "sourceIds": [
+        "watson"
+      ]
+    },
+    {
+      "id": "atlas-8b",
+      "model": "Qwen3-8B",
+      "design": "36 layers, two steering directions, one identity prompt, adaptive dose, automated persona categorization",
+      "sourceIds": [
+        "atlas",
+        "atlas-methods"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "atlas-neurons",
+      "studyId": "atlas-8b",
+      "kind": "count",
+      "numerator": 442368,
+      "unit": "MLP neuron coordinates",
+      "sourceIds": [
+        "atlas",
+        "atlas-methods"
+      ],
+      "caveat": "Model coordinates; not identities.",
+      "status": "reported"
+    },
+    {
+      "id": "atlas-directions",
+      "studyId": "atlas-8b",
+      "kind": "count",
+      "numerator": 884736,
+      "unit": "neuron-direction tests",
+      "sourceIds": [
+        "atlas",
+        "atlas-methods"
+      ],
+      "caveat": "Twice 442,368 coordinates; not independently sourced conversations.",
+      "status": "reported"
+    },
+    {
+      "id": "atlas-persona-labels",
+      "studyId": "atlas-8b",
+      "kind": "ratio",
+      "numerator": 34220,
+      "denominator": 884736,
+      "unit": "automatically persona-labelled replies per neuron-direction test",
+      "sourceIds": [
+        "atlas",
+        "atlas-methods"
+      ],
+      "caveat": "Automated Claude Haiku 5.5 labels; one prompt, adaptively steered; not 34,220 stable personalities.",
+      "status": "reported"
+    },
+    {
+      "id": "atlas-total-replies",
+      "studyId": "atlas-8b",
+      "kind": "count",
+      "numerator": 1891603,
+      "unit": "generated replies with retries",
+      "sourceIds": [
+        "atlas",
+        "atlas-methods"
+      ],
+      "caveat": "Different counting basis from original tested directions.",
+      "status": "reported"
+    },
+    {
+      "id": "atlas-selected-batch-reproduction",
+      "studyId": "atlas-8b",
+      "kind": "ratio",
+      "numerator": 536,
+      "denominator": 580,
+      "unit": "selected clear-persona records reproducing across three batches",
+      "sourceIds": [
+        "atlas-methods"
+      ],
+      "caveat": "Selected, clear subset; other strong-intervention outputs changed with batch layout.",
+      "status": "reported"
+    },
+    {
+      "id": "hedwig-8949",
+      "studyId": "hedwig-4b",
+      "kind": "ratio",
+      "numerator": 17,
+      "denominator": 20,
+      "unit": "hostility-labelled answers",
+      "sourceIds": [
+        "hedwig"
+      ],
+      "caveat": "Selected prompts; layer 14 neuron 8949 positive alone.",
+      "status": "reported"
+    },
+    {
+      "id": "hedwig-pair",
+      "studyId": "hedwig-4b",
+      "kind": "ratio",
+      "numerator": 16,
+      "denominator": 20,
+      "unit": "hostility-labelled answers",
+      "sourceIds": [
+        "hedwig"
+      ],
+      "caveat": "Lyra's pair; selected prompts.",
+      "status": "reported"
+    },
+    {
+      "id": "hedwig-7956",
+      "studyId": "hedwig-4b",
+      "kind": "ratio",
+      "numerator": 0,
+      "denominator": 20,
+      "unit": "hostility-labelled answers",
+      "sourceIds": [
+        "hedwig"
+      ],
+      "caveat": "Layer 13 neuron 7956 negative alone.",
+      "status": "reported"
+    },
+    {
+      "id": "hedwig-random",
+      "studyId": "hedwig-4b",
+      "kind": "ratio",
+      "numerator": 0,
+      "denominator": 100,
+      "unit": "hostility-labelled answers with five random neuron pairs",
+      "sourceIds": [
+        "hedwig"
+      ],
+      "caveat": "No matched full search; random pair intervention.",
+      "status": "reported"
+    },
+    {
+      "id": "watson-recipes",
+      "studyId": "watson-4b",
+      "kind": "ratio",
+      "numerator": 4,
+      "denominator": 6,
+      "unit": "selected style recipes replicating",
+      "sourceIds": [
+        "watson"
+      ],
+      "caveat": "Sarcasm and chill-friend recipes did not replicate.",
+      "status": "reported"
+    },
+    {
+      "id": "watson-generations",
+      "studyId": "watson-4b",
+      "kind": "count",
+      "numerator": 5685,
+      "unit": "completed model generations in original study",
+      "sourceIds": [
+        "watson"
+      ],
+      "caveat": "Study-reported GPU work, not reproduced in this object.",
+      "status": "reported"
+    },
+    {
+      "id": "watson-random-controls",
+      "studyId": "watson-4b",
+      "kind": "count",
+      "numerator": 12,
+      "unit": "same-dose random controls per candidate",
+      "sourceIds": [
+        "watson"
+      ],
+      "caveat": "No discovery-search-matched controls.",
+      "status": "reported"
+    },
+    {
+      "id": "watson-natural-activation-low",
+      "studyId": "watson-4b",
+      "kind": "measurement",
+      "value": 2.6,
+      "unit": "times strongest observed natural activation (low end)",
+      "sourceIds": [
+        "watson"
+      ],
+      "caveat": "Measured on sampled 20,000 documents.",
+      "status": "reported"
+    },
+    {
+      "id": "watson-natural-activation-high",
+      "studyId": "watson-4b",
+      "kind": "measurement",
+      "value": 12,
+      "unit": "times strongest observed natural activation (high end)",
+      "sourceIds": [
+        "watson"
+      ],
+      "caveat": "Measured on sampled 20,000 documents.",
+      "status": "reported"
+    },
+    {
+      "id": "watson-mmlu-baseline",
+      "studyId": "watson-4b",
+      "kind": "measurement",
+      "value": 73.7,
+      "unit": "percent baseline MMLU accuracy",
+      "sourceIds": [
+        "watson"
+      ],
+      "caveat": "Test-specific forced-choice measure.",
+      "status": "reported"
+    },
+    {
+      "id": "watson-mmlu-steered-low",
+      "studyId": "watson-4b",
+      "kind": "measurement",
+      "value": 27,
+      "unit": "percent steered MMLU accuracy (lower reported bound)",
+      "sourceIds": [
+        "watson"
+      ],
+      "caveat": "Random equally large pushes also impaired accuracy.",
+      "status": "reported"
+    },
+    {
+      "id": "watson-mmlu-steered-high",
+      "studyId": "watson-4b",
+      "kind": "measurement",
+      "value": 71,
+      "unit": "percent steered MMLU accuracy (upper reported bound)",
+      "sourceIds": [
+        "watson"
+      ],
+      "caveat": "Not a claim that this value generalizes to a deployed Qwen model.",
+      "status": "reported"
+    }
+  ],
+  "reproduction": {
+    "localModelRuns": 0,
+    "rawDataVerified": false,
+    "checks": [
+      "Source URLs and attribution collected",
+      "Count arithmetic checked independently",
+      "Cross-model and classification distinctions recorded",
+      "No independent raw text or GPU replication"
+    ]
+  }
+}
