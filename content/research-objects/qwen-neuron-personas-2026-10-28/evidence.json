@@ -271,7 +271,7 @@
       "sourceIds": [
         "watson"
       ],
-      "caveat": "Test-specific forced-choice measure.",
+      "caveat": "Source: Watson's 2026-10-25 Results, unsteered Qwen3.5-4B forced-choice MMLU baseline, contrasted with 27–71% across eight steered neurons. A source-reported measurement, not a 561 Group model replication.",
       "status": "reported"
     },
     {
@@ -279,11 +279,11 @@
       "studyId": "watson-4b",
       "kind": "measurement",
       "value": 27,
-      "unit": "percent steered MMLU accuracy (lower reported bound)",
+      "unit": "percent forced-choice MMLU accuracy at Lyra's full steering dose (lower bound among eight tested neurons)",
       "sourceIds": [
         "watson"
       ],
-      "caveat": "Random equally large pushes also impaired accuracy.",
+      "caveat": "Source: Watson, 'Persona Neurons, Pushed Hard', Results section (2026-10-25). The four trait-replicating neurons report 27%, 39%, 45%, and 47% MMLU; the full eight-neuron set extends to 71%. Same-dose random controls also lose factual accuracy. The 27% lower endpoint is source-reported, not independently reproduced.",
       "status": "reported"
     },
     {
@@ -291,11 +291,11 @@
       "studyId": "watson-4b",
       "kind": "measurement",
       "value": 71,
-      "unit": "percent steered MMLU accuracy (upper reported bound)",
+      "unit": "percent forced-choice MMLU accuracy at Lyra's full steering dose (upper bound among eight tested neurons)",
       "sourceIds": [
         "watson"
       ],
-      "caveat": "Not a claim that this value generalizes to a deployed Qwen model.",
+      "caveat": "Source: Watson, 'Persona Neurons, Pushed Hard', Results section (2026-10-25). The source explicitly reports 27–71% across the eight studied neurons, not only the four trait-replicating neurons (27%, 39%, 45%, 47%). The 71% upper bound is source-reported, not independently reproduced; matched random-control accuracy spans approximately 21–74%.",
       "status": "reported"
     }
   ],
