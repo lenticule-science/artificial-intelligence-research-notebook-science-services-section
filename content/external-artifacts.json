@@ -1,0 +1,23 @@
+{
+  "type": "ExternalArtifactManifest",
+  "version": 1,
+  "storageStatus": "external-storage-pending",
+  "artifacts": [
+    {
+      "sha256": "438971cb1d7a006c2f55b310443818b2fe9cdc5131c431fb102d9fc00399d97c",
+      "byteLength": 44201257,
+      "mediaType": "video/mp4",
+      "formerRoles": ["artifact-exchange", "artifact"]
+    },
+    {
+      "sha256": "43d962402a1963d41a69ed08d2e50e33e3b2e824e80de558e410b79678632f47",
+      "byteLength": 47017824,
+      "mediaType": "video/mp4",
+      "formerRoles": ["artifact-exchange", "artifact"]
+    }
+  ],
+  "credentials": {
+    "provisioning": "out-of-band",
+    "trackedPrivateKeyMaterial": false
+  }
+}

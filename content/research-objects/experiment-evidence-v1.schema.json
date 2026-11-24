@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lenticule-science/artificial-intelligence-research-notebook-science-services-section/blob/main/content/research-objects/experiment-evidence-v1.schema.json",
+  "title": "Source-attributed experimental claim packet v1",
+  "description": "Portable claims with study, model, source, denominator, status and caveat; schema validity is not scientific validation.",
+  "type": "object",
+  "required": [
+    "kind",
+    "version",
+    "researchCut",
+    "researchStatus",
+    "sources",
+    "studies",
+    "claims",
+    "reproduction"
+  ],
+  "properties": {
+    "kind": {
+      "const": "source-attributed-experimental-claims"
+    },
+    "version": {
+      "const": 1
+    },
+    "researchCut": {
+      "type": "string",
+      "format": "date"
+    },
+    "researchStatus": {
+      "type": "string",
+      "minLength": 8
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "url",
+          "basis",
+          "availability"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "basis": {
+            "enum": [
+              "original-research",
+              "independent-follow-up",
+              "secondary-methods-report",
+              "peer-reviewed-context"
+            ]
+          },
+          "availability": {
+            "enum": [
+              "readable",
+              "redirected-unreadable",
+              "indexed-only"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "studies": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "model",
+          "design",
+          "sourceIds"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model": {
+            "type": "string",
+            "minLength": 1
+          },
+          "design": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceIds": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "studyId",
+          "kind",
+          "status",
+          "sourceIds",
+          "unit",
+          "caveat"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "studyId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "count",
+              "ratio",
+              "measurement"
+            ]
+          },
+          "status": {
+            "enum": [
+              "reported",
+              "replication-attempt",
+              "independently-verified"
+            ]
+          },
+          "sourceIds": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "caveat": {
+            "type": "string",
+            "minLength": 1
+          },
+          "numerator": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "denominator": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "value": {
+            "type": "number"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "ratio"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "numerator",
+                "denominator"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "count"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "numerator"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "measurement"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "value"
+              ]
+            }
+          }
+        ],
+        "additionalProperties": true
+      }
+    },
+    "reproduction": {
+      "type": "object",
+      "required": [
+        "localModelRuns",
+        "rawDataVerified",
+        "checks"
+      ],
+      "properties": {
+        "localModelRuns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rawDataVerified": {
+          "type": "boolean"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

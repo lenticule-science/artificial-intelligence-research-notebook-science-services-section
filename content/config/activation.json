@@ -1,0 +1,26 @@
+{
+  "status": "authenticated-supplier-and-provider-chain-active",
+  "notebookIdentityBound": true,
+  "providerStandingGrantAccepted": true,
+  "providerStandingGrantAcceptance": "urn:sha256:54931a5ca0fceec68e050a8ae13e9cd0f35a764a5bfcd63f2f2d94c2675d5ede",
+  "providerActivationObservedOn": "2026-07-22",
+  "sourceEffects": "active-only-for-exact-settled-path-free-curriculum-products",
+  "videoEffects": "active-only-for-admitted-source-state-and-eligible-channel-capacity",
+  "firstLiveDelivery": {
+    "curriculumProduct": "urn:sha256:aecfa53edeead51e92e6ae010f47085a879b4412f592a38c1a39f3b29bef7e2e",
+    "videoAdmission": "urn:sha256:a10feaab3b03a07f4994fe5f56313499ca51942e2b1e6101f65223bd261a6ea1",
+    "delivery": "urn:sha256:c1b4a3312b49fa5269d1b10e776a479cbe58db7d757e7509c41280dacd52f9ce",
+    "videoSha256": "sha256:43d962402a1963d41a69ed08d2e50e33e3b2e824e80de558e410b79678632f47",
+    "byteLength": 47017824,
+    "admittedOn": "2026-07-22"
+  },
+  "signedChannelDelivery": {
+    "status": "enabled-active-under-user-systemd",
+    "serviceUnit": "artificial-intelligence-research-notebook-explainer-a2a.service",
+    "artifactServiceUnit": "artificial-intelligence-research-notebook-artifacts.service",
+    "customer": "urn:ame:artificial-intelligence-youtube-channel-enterprise",
+    "agentCardIdentity": "ni:///sha-256;0gi9QKYrNSEBuEuEgJomcDKd_eRrio6d4ooHgCr2YOU",
+    "artifactAuthority": "per-delivery bearer capability"
+  },
+  "authorityWithheld": ["source deletion", "foreign curriculum products", "off-allocation generation", "channel upload schedule or publication"]
+}
